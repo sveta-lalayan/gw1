@@ -56,13 +56,13 @@ class Books(models.Model):
     annotation = models.TextField(verbose_name="аннотация", **NULLABLE)
     barcode = models.PositiveIntegerField(verbose_name="штрихкод", **NULLABLE)
     quantity_all = models.PositiveIntegerField(
-        verbose_name="всего в библиотеке", default=0
+        verbose_name="всего в библиотеке", default=1
     )
     quantity_lending = models.PositiveIntegerField(
-        verbose_name="выдано всего", default=0
+        verbose_name="выдано всего", default=1
     )
     amount_lending = models.PositiveIntegerField(
-        verbose_name="количество выдачи", default=0
+        verbose_name="количество выдачи", default=1
     )
     image = models.ImageField(
         upload_to="books/media",
